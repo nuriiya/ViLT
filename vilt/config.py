@@ -170,7 +170,7 @@ def task_finetune_vqa_randaug():
     datasets = ["vqa"]
     train_transform_keys = ["pixelbert_randaug"]
     loss_names = _loss_names({"vqa": 1})
-    batch_size = 256
+    batch_size = 8
     max_epoch = 10
     max_steps = None
     warmup_steps = 0.1
