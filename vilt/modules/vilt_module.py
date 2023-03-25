@@ -66,7 +66,9 @@ class ViLTransformerSS(pl.LightningModule):
 
         if self.hparams.config["loss_names"]["vqa"] > 0:
             vs = self.hparams.config["vqav2_label_size"]
+            # hs 为hidden_size
             self.vqa_classifier = nn.Sequential(
+                # nn.linear是全连接层
                 nn.Linear(hs, hs * 2),
                 nn.LayerNorm(hs * 2),
                 nn.GELU(),

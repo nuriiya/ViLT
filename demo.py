@@ -40,6 +40,7 @@ def main(_config):
             "loss_names": loss_names,
         }
     )
+    print("look at me:\n","<---------_config---------->",_config)
 
     model = ViLTransformerSS(_config)
     model.setup("test")
@@ -80,6 +81,7 @@ def main(_config):
 
         selected_token = ""
         encoded = tokenizer(inferred_token)
+        print("look at me:\n","<---------encoded---------->\n",encoded)
 
         if hidx > 0 and hidx < len(encoded["input_ids"][0][:-1]):
             with torch.no_grad():
@@ -148,7 +150,7 @@ def main(_config):
                 selected_token = tokenizer.convert_ids_to_tokens(
                     encoded["input_ids"][0][hidx]
                 )
-
+        print("look at me:\n","<---------encoded---------->\n",inferred_token)
         return [np.array(image), inferred_token[0], selected_token]
 
     inputs = [

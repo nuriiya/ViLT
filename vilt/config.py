@@ -73,7 +73,7 @@ def config():
     # below params varies with the environment
     data_root = ""
     log_dir = "result"
-    per_gpu_batchsize = 0  # you should define this manually with per_gpu_batch_size=#
+    per_gpu_batchsize = 8  # you should define this manually with per_gpu_batch_size=#
     num_gpus = 1
     num_nodes = 1
     load_path = ""
@@ -171,7 +171,7 @@ def task_finetune_vqa_randaug():
     train_transform_keys = ["pixelbert_randaug"]
     loss_names = _loss_names({"vqa": 1})
     batch_size = 8
-    max_epoch = 10
+    max_epoch = 2
     max_steps = None
     warmup_steps = 0.1
     draw_false_image = 0

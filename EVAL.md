@@ -8,6 +8,8 @@ python run.py with data_root=<ARROW_ROOT> num_gpus=<NUM_GPUS> num_nodes=<NUM_NOD
 ex)
 python run.py with data_root=/data2/dsets/dataset num_gpus=8 num_nodes=1 per_gpu_batchsize=64 task_finetune_vqa_randaug test_only=True precision=32 load_path="weights/vilt_vqa.ckpt"
 
+python run.py with data_root="E:\\ViLTDataset\\images" num_gpus=1 num_nodes=1 per_gpu_batchsize=8 task_finetune_vqa_randaug test_only=True precision=32 load_path="weights/vilt_vqa.ckpt"
+
 output > This script will generate `result/vqa_submit_vilt_vqa.json`, you can upload it to eval.ai (https://eval.ai/web/challenges/challenge-page/830/overview) evaluation server to get test-dev score.
 [{"test-dev": {"yes/no": 87.44, "number": 50.2, "other": 62.38, "overall": 71.32}}]
 ```

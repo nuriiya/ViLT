@@ -31,7 +31,7 @@ pip install gradio==1.6.4
 python demo.py with num_gpus=<0 if you have no gpus else 1> load_path="<YOUR_WEIGHT_ROOT>/vilt_200k_mlm_itm.ckpt"
 
 ex)
-python demo.py with num_gpus=0 load_path="weights/vilt_200k_mlm_itm.ckpt"
+python demo.py with num_gpus=1 load_path="weights/vilt_200k_mlm_itm.ckpt"
 ```
 
 ## Out-of-the-box VQA Demo

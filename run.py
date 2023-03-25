@@ -13,7 +13,7 @@ def main(_config):
     pl.seed_everything(_config["seed"])
 
     dm = MTDataModule(_config, dist=True)
-
+    print("look at me:\n","<------------------->",_config)
     model = ViLTransformerSS(_config)
     exp_name = f'{_config["exp_name"]}'
 
